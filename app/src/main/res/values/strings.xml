@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Andes</string>
+    <string name="navigation_home">Home</string>
+    <string name="navigation_working">Working</string>
+    <string name="navigation_discovery">Discovery</string>
+    <string name="navigation_me">Me</string>
+</resources>

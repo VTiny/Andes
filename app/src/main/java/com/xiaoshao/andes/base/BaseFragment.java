@@ -34,8 +34,23 @@ public class BaseFragment extends Fragment {
         }
     }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        initView(view);
+        afterViewCreated();
+    }
+
     protected int getContentViewLayout() {
         return 0;
+    }
+
+    protected void initView(View rootView) {
+
+    }
+
+    protected void afterViewCreated() {
+
     }
 
 }

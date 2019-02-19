@@ -76,16 +76,16 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
 
     private void initTabs() {
         mTabFragmentMap = new HashMap<>();
-        mTabFragmentMap.put(R.id.navigation_home, new MainHomeTabFragment());
         mTabFragmentMap.put(R.id.navigation_working, new MainWorkingTabFragment());
+        mTabFragmentMap.put(R.id.navigation_home, new MainHomeTabFragment());
         mTabFragmentMap.put(R.id.navigation_discovery, new MainDiscoveryTabFragment());
         mTabFragmentMap.put(R.id.navigation_me, new MainMeTabFragment());
         FragmentManager fm = getSupportFragmentManager();
         if (fm != null) {
             FragmentTransaction transaction = fm.beginTransaction();
-            mCurrentFragment = mTabFragmentMap.get(R.id.navigation_home);
+            mCurrentFragment = mTabFragmentMap.get(R.id.navigation_working);
             if (mCurrentFragment == null) {
-                mCurrentFragment = new MainHomeTabFragment();
+                mCurrentFragment = new MainWorkingTabFragment();
             }
             transaction.replace(R.id.fragment_container, mCurrentFragment);
             transaction.commit();
@@ -101,7 +101,5 @@ public class MainActivity extends BaseActivity implements BottomNavigationView.O
         transaction.show(targetFragment).commitAllowingStateLoss();
         mCurrentFragment = targetFragment;
     }
-
-
 
 }

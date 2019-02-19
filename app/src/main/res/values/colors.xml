@@ -21,6 +21,7 @@
     <color name="blackCC">#cccccc</color>
     <color name="blackDD">#dddddd</color>
     <color name="blackEE">#eeeeee</color>
+    <color name="blueGray">#EDEFF3</color>
 
     <color name="colorPrimary50">#50008577</color>
     <color name="colorAccent50">#50dcca72</color>

@@ -9,6 +9,7 @@ import com.xiaoshao.andes.R;
 import com.xiaoshao.andes.base.BaseRecyclerViewHolder;
 import com.xiaoshao.andes.base.IListBean;
 import com.xiaoshao.andes.bean.ListBean;
+import com.xiaoshao.andes.learning.TouchDelegateLearningFragment;
 import com.xiaoshao.andes.util.SingleFragmentHelper;
 import com.xiaoshao.andes.working.ExpandableIndexFragment;
 
@@ -40,6 +41,10 @@ public class SimpleListHolder extends BaseRecyclerViewHolder<IListBean> {
                         getContext().startActivity(intent);
                         break;
 
+                    case 2:
+                        intent = SingleFragmentHelper.getStartIntent(getContext(), TouchDelegateLearningFragment.class, null);
+                        getContext().startActivity(intent);
+                        break;
                 }
             }
         });

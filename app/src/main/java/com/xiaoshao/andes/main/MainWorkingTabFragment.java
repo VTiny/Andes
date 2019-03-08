@@ -42,6 +42,9 @@ public class MainWorkingTabFragment extends BaseListFragment {
         ListBean bean2 = new ListBean();
         bean2.setTitle("MotionLayout Learning");
         list.add(bean2);
+        ListBean bean3 = new ListBean();
+        bean3.setTitle("TouchDelegate Learning");
+        list.add(bean3);
 
         getAdapter().updateDataAndNotify(list, true);
     }

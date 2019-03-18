@@ -3,13 +3,12 @@ package com.xiaoshao.andes.learning;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 import com.xiaoshao.andes.R;
 import com.xiaoshao.andes.base.BaseFragment;
-import com.xiaoshao.andes.util.SystemUtils;
+import com.xiaoshao.andes.util.SystemUtil;
 import com.xiaoshao.andes.util.TouchDelegateHelper;
 
 /**
@@ -40,16 +39,16 @@ public class TouchDelegateLearningFragment extends BaseFragment {
         });
 
         TouchDelegateHelper.expandViewClickArea(btn,
-                (int) SystemUtils.dp2px(500),
-                (int) SystemUtils.dp2px(500),
-                (int) SystemUtils.dp2px(500),
-                (int) SystemUtils.dp2px(500));
+                (int) SystemUtil.dp2px(500),
+                (int) SystemUtil.dp2px(500),
+                (int) SystemUtil.dp2px(500),
+                (int) SystemUtil.dp2px(500));
 
 //        TouchDelegateHelper.expandClickAreaByAddForkView(btn,
-//                (int) SystemUtils.dp2px(40),
-//                (int) SystemUtils.dp2px(40),
-//                (int) SystemUtils.dp2px(40),
-//                (int) SystemUtils.dp2px(40));
+//                (int) SystemUtil.dp2px(40),
+//                (int) SystemUtil.dp2px(40),
+//                (int) SystemUtil.dp2px(40),
+//                (int) SystemUtil.dp2px(40));
 
 
         father.setOnClickListener(new View.OnClickListener() {
@@ -59,16 +58,16 @@ public class TouchDelegateLearningFragment extends BaseFragment {
             }
         });
 //        TouchDelegateHelper.expandViewClickArea(father,
-//                (int) SystemUtils.dp2px(0),
-//                (int) SystemUtils.dp2px(15),
-//                (int) SystemUtils.dp2px(0),
-//                (int) SystemUtils.dp2px(15));
+//                (int) SystemUtil.dp2px(0),
+//                (int) SystemUtil.dp2px(15),
+//                (int) SystemUtil.dp2px(0),
+//                (int) SystemUtil.dp2px(15));
 
 //        TouchDelegateHelper.expandViewClickArea(father,
-//                (int) SystemUtils.dp2px(100),
-//                (int) SystemUtils.dp2px(50),
-//                (int) SystemUtils.dp2px(100),
-//                (int) SystemUtils.dp2px(50));
+//                (int) SystemUtil.dp2px(100),
+//                (int) SystemUtil.dp2px(50),
+//                (int) SystemUtil.dp2px(100),
+//                (int) SystemUtil.dp2px(50));
 
 
     }

@@ -10,7 +10,7 @@ import com.xiaoshao.andes.base.BaseApplication;
  * Author: liuxiao
  * Date: 2019/3/4
  */
-public class SystemUtils {
+public class SystemUtil {
 
     public static float dp2px(float dp) {
         return dp2px(BaseApplication.getInstance().getResources(), dp);

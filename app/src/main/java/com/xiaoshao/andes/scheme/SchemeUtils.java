@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 
+import com.xiaoshao.andes.learning.ItemDecorationLearningFragment;
 import com.xiaoshao.andes.learning.TouchDelegateLearningFragment;
 import com.xiaoshao.andes.util.DataUtil;
 import com.xiaoshao.andes.util.SingleFragmentHelper;
@@ -37,6 +38,9 @@ public class SchemeUtils {
                         break;
                     case SchemeProtocol.ANDES_PROTOCOL_TOUCH_DELEGATE:
                         intent = SingleFragmentHelper.getStartIntent(context, TouchDelegateLearningFragment.class, null);
+                        break;
+                    case SchemeProtocol.ANDES_PROTOCOL_ITEM_DECORATION:
+                        intent = SingleFragmentHelper.getStartIntent(context, ItemDecorationLearningFragment.class, null);
                         break;
                 }
             }

@@ -1,0 +1,31 @@
+{
+  "column": "item_decoration_learning",
+  "data": [
+    {
+      "title": "Item 1",
+      "style": "simple_large_divider",
+      "scheme": ""
+    },
+    {
+      "title": "Item 2",
+      "scheme": ""
+    },
+    {
+      "title": "Item 3",
+      "scheme": ""
+    },
+    {
+      "title": "Item 4",
+      "scheme": ""
+    },
+    {
+      "title": "Item 5",
+      "style": "simple_large_divider",
+      "scheme": ""
+    },
+    {
+      "title": "Item 6",
+      "scheme": ""
+    }
+  ]
+}

@@ -11,6 +11,7 @@ public class ListItemBean implements IListBean {
 
     private String title;
     private String scheme;
+    private String style;
 
     public String getTitle() {
         return title;
@@ -26,5 +27,13 @@ public class ListItemBean implements IListBean {
 
     public void setScheme(String scheme) {
         this.scheme = scheme;
+    }
+
+    public String getStyle() {
+        return style;
+    }
+
+    public void setStyle(String style) {
+        this.style = style;
     }
 }

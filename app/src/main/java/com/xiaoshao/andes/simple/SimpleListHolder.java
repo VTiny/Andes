@@ -9,12 +9,14 @@ import com.xiaoshao.andes.base.BaseRecyclerViewHolder;
 import com.xiaoshao.andes.base.CommonClickHandler;
 import com.xiaoshao.andes.base.IListBean;
 import com.xiaoshao.andes.bean.ListItemBean;
+import com.xiaoshao.andes.list.DividerStyle;
 
 /**
  * Description:
  * Author: liuxiao
  * Date: 2019/2/18
  */
+@DividerStyle
 public class SimpleListHolder extends BaseRecyclerViewHolder<IListBean> {
 
     public SimpleListHolder(ViewGroup parent) {
@@ -24,10 +26,8 @@ public class SimpleListHolder extends BaseRecyclerViewHolder<IListBean> {
     @Override
     protected void bindView(final IListBean itemData) {
         super.bindView(itemData);
+        itemView.setBackground(getContext().getResources().getDrawable(R.drawable.base_list_item_bg));
         ((TextView) getView(R.id.title)).setText(((ListItemBean) itemData).getTitle());
-        if (getAdapterPosition() == 0) {
-            getView(R.id.divider).setVisibility(View.GONE);
-        }
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,4 +35,5 @@ public class SimpleListHolder extends BaseRecyclerViewHolder<IListBean> {
             }
         });
     }
+
 }

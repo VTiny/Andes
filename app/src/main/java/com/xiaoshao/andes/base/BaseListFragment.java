@@ -9,6 +9,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.xiaoshao.andes.R;
+import com.xiaoshao.andes.bean.ColumnBean;
+import com.xiaoshao.andes.simple.SimpleListAdapter;
+import com.xiaoshao.andes.util.DataUtil;
+import com.xiaoshao.andes.util.JsonUtil;
+import com.xiaoshao.andes.util.StringUtil;
+
+import java.util.List;
 
 /**
  * Description:
@@ -35,7 +42,9 @@ public abstract class BaseListFragment extends BaseFragment {
         }
     }
 
-    protected abstract BaseRecyclerViewAdapter createAdapter();
+    protected BaseRecyclerViewAdapter createAdapter() {
+        return new SimpleListAdapter();
+    }
 
     @Override
     protected int getContentViewLayout() {
@@ -51,10 +60,40 @@ public abstract class BaseListFragment extends BaseFragment {
         mRecyclerView.setAdapter(mAdapter);
     }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        loadAssetLocal();
+    }
+
+    protected void onResponse(List response) {
+        if (DataUtil.isValid(getAdapter())) {
+            getAdapter().updateDataAndNotify(response, true);
+        }
+    }
+
     protected RecyclerView.LayoutManager createLayoutManager() {
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         return layoutManager;
+    }
+
+    protected void loadAssetLocal() {
+        if (getAdapter() == null) {
+            return;
+        }
+        if (DataUtil.isValid(getAssetDataPath())) {
+            ColumnBean columnBean = JsonUtil.fromJson(StringUtil.getLocalJsonFile(getAssetDataPath()), ColumnBean.class);
+            onResponse(columnBean.getData());
+        }
+    }
+
+    protected String getAssetDataPath() {
+        return null;
+    }
+
+    protected RecyclerView getRecyclerView() {
+        return mRecyclerView;
     }
 
     protected BaseRecyclerViewAdapter getAdapter() {

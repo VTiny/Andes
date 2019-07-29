@@ -1,10 +1,12 @@
 package com.xiaoshao.andes.base;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 
 import com.xiaoshao.andes.bean.ListItemBean;
 import com.xiaoshao.andes.scheme.SchemeUtils;
+import com.xiaoshao.andes.util.DataUtil;
 
 /**
  * Description:
@@ -17,7 +19,10 @@ public class CommonClickHandler {
         if (context == null || itemBean == null) {
             return;
         }
-        context.startActivity(SchemeUtils.getAndesIntent(context, Uri.parse(itemBean.getScheme())));
+        Intent intent = SchemeUtils.getAndesIntent(context, Uri.parse(itemBean.getScheme()));
+        if (DataUtil.isValid(intent)) {
+            context.startActivity(intent);
+        }
     }
 
 }

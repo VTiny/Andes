@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.xiaoshao.andes.list.DividerStyle;
+
 import java.util.List;
 
 /**
@@ -17,6 +19,7 @@ import java.util.List;
  * Author: liuxiao
  * Date: 2019/2/18
  */
+@DividerStyle
 public class BaseRecyclerViewHolder<D> extends RecyclerView.ViewHolder {
 
     private SparseArray<View> mViewCache = new SparseArray<>();

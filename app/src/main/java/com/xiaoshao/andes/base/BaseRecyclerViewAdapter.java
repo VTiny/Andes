@@ -85,6 +85,15 @@ public abstract class BaseRecyclerViewAdapter<D> extends RecyclerView.Adapter<Ba
     public abstract BaseRecyclerViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType);
 
     @Override
+    public int getItemViewType(int position) {
+        return 0;
+    }
+
+    public Class<? extends BaseRecyclerViewHolder> getItemViewHolderClass(int itemViewType) {
+        return null;
+    }
+
+    @Override
     public final void onBindViewHolder(@NonNull BaseRecyclerViewHolder viewHolder, int position) {
         onBindItemViewHolder(viewHolder, position);
     }

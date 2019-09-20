@@ -16,6 +16,10 @@
     {
       "title": "ItemDecoration Learning",
       "scheme": "xiaoshao://andes/item_decoration"
+    },
+    {
+      "title": "EllipsisTextView Learning",
+      "scheme": "xiaoshao://andes/ellipsis_tv"
     }
   ]
 }

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 
+import com.xiaoshao.andes.learning.EllipsisTextViewFragment;
 import com.xiaoshao.andes.learning.ItemDecorationLearningFragment;
 import com.xiaoshao.andes.learning.TouchDelegateLearningFragment;
 import com.xiaoshao.andes.util.DataUtil;
@@ -41,6 +42,9 @@ public class SchemeUtils {
                         break;
                     case SchemeProtocol.ANDES_PROTOCOL_ITEM_DECORATION:
                         intent = SingleFragmentHelper.getStartIntent(context, ItemDecorationLearningFragment.class, null);
+                        break;
+                    case SchemeProtocol.ANDES_PROTOCOL_ELLIPSIS_TEXT_VIEW:
+                        intent = SingleFragmentHelper.getStartIntent(context, EllipsisTextViewFragment.class, null);
                         break;
                 }
             }

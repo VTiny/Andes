@@ -1,6 +1,7 @@
 package com.xiaoshao.andes.base;
 
 import android.os.Bundle;
+import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -18,6 +19,8 @@ import com.xiaoshao.andes.R;
  * Description:
  */
 public class BaseFragment extends Fragment {
+
+    protected final String TAG = this.getClass().getSimpleName();
 
     @Nullable
     @Override
@@ -51,6 +54,13 @@ public class BaseFragment extends Fragment {
 
     protected void afterViewCreated() {
 
+    }
+
+    protected <V extends View> V findViewById(@IdRes int viewId) {
+        if (getView() == null) {
+            return null;
+        }
+        return getView().findViewById(viewId);
     }
 
 }

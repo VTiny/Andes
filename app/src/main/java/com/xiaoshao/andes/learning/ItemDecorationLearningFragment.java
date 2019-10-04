@@ -36,17 +36,17 @@ public class ItemDecorationLearningFragment extends BaseListFragment {
         protected void initStyle(Paint textPaint) {
             textPaint.setTextSize(39);
             textPaint.setColor(Color.RED);
-            textPaint.setTextAlign(Paint.Align.RIGHT);
+            textPaint.setTextAlign(Paint.Align.CENTER);
             setItemHeight(100);
             setReverse(true);
         }
 
         @Override
         protected String getGroupTitle(int position) {
-            if (position % 2 == 1) {
+//            if (position % 2 == 1) {
                 return String.format("Group: %s", position);
-            }
-            return super.getGroupTitle(position);
+//            }
+//            return super.getGroupTitle(position);
         }
     }
 }

@@ -32,7 +32,6 @@ public class GroupListItemDecoration extends RecyclerView.ItemDecoration {
      * 可在此方法中设置文字样式、ItemDecoration高度等
      */
     protected void initStyle(Paint textPaint) {
-
     }
 
     /**
@@ -44,13 +43,38 @@ public class GroupListItemDecoration extends RecyclerView.ItemDecoration {
 
     @Override
     public void getItemOffsets(@NonNull Rect outRect, @NonNull View view, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
-        if (TextUtils.isEmpty(getGroupTitle(parent.getChildAdapterPosition(view)))) {
-            return;
-        }
-        if (mIsReverse) {
-            outRect.set(0, mItemHeight, 0, 0);
+        int position = parent.getChildAdapterPosition(view);
+        if (TextUtils.isEmpty(getGroupTitle(position))) {
+            getGroupInsideOffset(outRect, view, parent, state);
         } else {
-            outRect.set(0, 0, 0, mItemHeight);
+            getGroupOutsideOffset(outRect, view, parent, state);
+        }
+        getExtraOffset(outRect, view, parent, state, position);
+    }
+
+    /**
+     * 组内部Item之间的Offset
+     */
+    protected void getGroupInsideOffset(@NonNull Rect outRect, @NonNull View view, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
+
+    }
+
+    /**
+     * 组与组之间的Offset
+     */
+    protected void getGroupOutsideOffset(@NonNull Rect outRect, @NonNull View view, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
+        setRect(outRect, 0, mItemHeight);
+    }
+
+    protected void getExtraOffset(@NonNull Rect outRect, @NonNull View view, @NonNull RecyclerView parent, @NonNull RecyclerView.State state, int position) {
+
+    }
+
+    protected void setRect(@NonNull Rect rect, int x, int y) {
+        if (mIsReverse) {
+            rect.set(0, y, x, 0);
+        } else {
+            rect.set(0, 0, x, y);
         }
     }
 
@@ -98,4 +122,5 @@ public class GroupListItemDecoration extends RecyclerView.ItemDecoration {
         }
         return x;
     }
+
 }

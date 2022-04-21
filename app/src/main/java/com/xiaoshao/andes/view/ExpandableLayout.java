@@ -1,4 +1,4 @@
-package com.xiaoshao.andes;
+package com.xiaoshao.andes.view;
 
 import android.animation.Animator;
 import android.animation.ValueAnimator;
@@ -12,6 +12,8 @@ import android.util.AttributeSet;
 import android.view.animation.Interpolator;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+
+import com.xiaoshao.andes.R;
 
 /**
  * Created by zhaonan on 17/5/9.

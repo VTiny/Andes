@@ -1,4 +1,4 @@
-package com.xiaoshao.andes;
+package com.xiaoshao.andes.view;
 
 import android.graphics.Rect;
 import android.support.annotation.NonNull;
@@ -13,6 +13,8 @@ import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+
+import com.xiaoshao.andes.R;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -4,4 +4,5 @@
     <string name="navigation_working">Working</string>
     <string name="navigation_discovery">Discovery</string>
     <string name="navigation_me">Me</string>
+    <string name="working_motion_demo_hello_world">hello world</string>
 </resources>

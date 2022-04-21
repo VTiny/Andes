@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.xiaoshao.andes.ExpandableLayout
+    <com.xiaoshao.andes.view.ExpandableLayout
         android:id="@+id/ly_expandable"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -35,7 +35,7 @@
                     android:layout_height="match_parent" />
             </ScrollView>
         </LinearLayout>
-    </com.xiaoshao.andes.ExpandableLayout>
+    </com.xiaoshao.andes.view.ExpandableLayout>
 
     <View
         android:id="@+id/shade"

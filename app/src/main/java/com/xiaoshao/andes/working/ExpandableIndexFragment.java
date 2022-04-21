@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.xiaoshao.andes.MyPopupWindow;
+import com.xiaoshao.andes.view.MyPopupWindow;
 import com.xiaoshao.andes.R;
 import com.xiaoshao.andes.base.BaseFragment;
 import com.xiaoshao.andes.main.MainMeTabFragment;

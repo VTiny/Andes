@@ -1,4 +1,4 @@
-package com.xiaoshao.andes;
+package com.xiaoshao.andes.view;
 
 import android.content.Context;
 import android.graphics.Canvas;

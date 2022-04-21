@@ -10,7 +10,7 @@ import com.xiaoshao.andes.learning.TouchDelegateLearningFragment;
 import com.xiaoshao.andes.util.DataUtil;
 import com.xiaoshao.andes.util.SingleFragmentHelper;
 import com.xiaoshao.andes.working.ExpandableIndexFragment;
-import com.xiaoshao.andes.working.MotionLayoutFragment;
+import com.xiaoshao.andes.working.motion.MotionLayoutFragment;
 
 import java.util.List;
 

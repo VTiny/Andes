@@ -2,7 +2,6 @@ package com.xiaoshao.andes.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.text.SpannableStringBuilder;
@@ -17,7 +16,6 @@ import android.util.Pair;
 import android.view.View;
 import android.widget.Toast;
 
-import com.xiaoshao.andes.MyTextView;
 import com.xiaoshao.andes.R;
 import com.xiaoshao.andes.util.DataUtil;
 import com.xiaoshao.andes.util.StringUtil;

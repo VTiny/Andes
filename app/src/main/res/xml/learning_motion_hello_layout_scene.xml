@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetEnd="@layout/learning_motion_hello_end_layout"
+        app:constraintSetStart="@layout/learning_motion_hello_layout"
+        app:duration="1000">
+        <OnClick motion:targetId="@+id/iv_icon" />
+    </Transition>
+
+</MotionScene>
